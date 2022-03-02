@@ -69,7 +69,7 @@ app.get('/:listName', function(req,res){
     
     List.findOne({name: customListName}, function(err, foundList){
         if(!err){
-            if (!foundList){
+            if (!foundList && customListName != 'About'){
                 // Creating a New Custom List
                 const list = new List({
                     name: customListName,

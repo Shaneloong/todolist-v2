@@ -64,6 +64,10 @@ app.get("/", function(req, res){
     
 });
 
+app.get('/about', function(req, res){
+    res.render('about');
+})
+
 app.get('/:listName', function(req,res){
     const customListName = _.capitalize(req.params.listName);
     
@@ -85,10 +89,6 @@ app.get('/:listName', function(req,res){
         }
         
     })
-})
-
-app.get('/about', function(req, res){
-    res.render('about');
 })
 
 
